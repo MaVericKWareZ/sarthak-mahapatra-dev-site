@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 13, 17, 23;
+  --background-end-rgb: 23, 27, 33;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb))) fixed;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24;
+}
+
+.section-title {
+  @apply text-3xl font-bold mb-8 text-gray-100 relative inline-block;
+}
+
+.section-title::after {
+  content: "";
+  @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-indigo-600;
+}
+
+.card {
+  @apply bg-slate-900 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20;
+}
+
+/* Custom color for hover state */
+.bg-gray-750 {
+  background-color: #1f2937;
+}
+
+/* Animated background gradient */
+.animated-gradient {
+  background: linear-gradient(-45deg, #4f46e5, #7c3aed, #2563eb, #4338ca);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f46e5;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
