@@ -118,7 +118,7 @@ export default function Hero() {
             performance and reliability.
           </motion.p>
 
-          <div className="flex items-center gap-4 ml-1 mt-2 sm:mt-0">
+          <div className="flex justify-center sm:justify-start items-center gap-4 mt-2 sm:mt-0">
             <Link
               href="https://github.com/MaVericKWareZ"
               target="_blank"
