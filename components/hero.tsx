@@ -118,34 +118,48 @@ export default function Hero() {
             performance and reliability.
           </motion.p>
 
-          <div className="flex justify-center sm:justify-start items-center gap-4 mt-2 sm:mt-0">
-            <Link
-              href="https://github.com/MaVericKWareZ"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="outline"
-                size="icon"
-                className="text-gray-400 hover:text-white hover:bg-gray-800"
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-start items-center gap-4 mt-2 sm:mt-0">
+            {/* Row 1: Social Icons */}
+            <div className="flex gap-4">
+              <Link
+                href="https://github.com/MaVericKWareZ"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Button>
-            </Link>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="text-gray-400 hover:text-white hover:bg-gray-800"
+                >
+                  <Github className="h-5 w-5" />
+                  <span className="sr-only">GitHub</span>
+                </Button>
+              </Link>
 
-            <Link
-              href="https://linkedin.com/in/sarthakmahapatra"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+              <Link
+                href="https://linkedin.com/in/sarthakmahapatra"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="text-gray-400 hover:text-white hover:bg-gray-800"
+                >
+                  <Linkedin className="h-5 w-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
+              </Link>
+            </div>
+
+            {/* Row 2: Resume Button */}
+            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
-                size="icon"
-                className="text-gray-400 hover:text-white hover:bg-gray-800"
+                className="flex items-center gap-2 text-gray-400 hover:text-white hover:bg-gray-800"
               >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
+                <Download className="w-4 h-4" />
+                View Resume
               </Button>
             </Link>
           </div>
