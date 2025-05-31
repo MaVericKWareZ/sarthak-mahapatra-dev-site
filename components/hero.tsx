@@ -3,7 +3,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
+import {
+  ArrowRight,
+  Download,
+  Github,
+  Linkedin,
+  ScrollText,
+} from "lucide-react";
 import Link from "next/link";
 import TypewriterComponent from "typewriter-effect";
 import Particles from "./particles";
@@ -158,8 +164,8 @@ export default function Hero() {
                 variant="outline"
                 className="flex items-center gap-2 text-gray-400 hover:text-white hover:bg-gray-800"
               >
-                <Download className="w-4 h-4" />
-                View Resume
+                <ScrollText className="w-4 h-4" />
+                Resume
               </Button>
             </Link>
           </div>
